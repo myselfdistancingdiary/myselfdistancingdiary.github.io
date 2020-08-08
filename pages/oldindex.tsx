@@ -6,16 +6,21 @@ const Section = styled.section`
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  background-size:auto;
+  background-size: cover;
+  padding: 50px;
+`;
 
-`
+const HeaderTopText = styled.div`
+  letter-spacing: 0.18em;
+  text-align: center;
+`;
 
 export default function Page() {
-    return (
-      <Layout>
-        <Section>
-          Login
-        </Section>
-      </Layout>
-    )
-  }
+  return (
+    <Layout>
+      <Section>
+        hello
+      </Section>
+    </Layout>
+  )
+}

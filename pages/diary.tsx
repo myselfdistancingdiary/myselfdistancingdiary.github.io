@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import Layout from 'components/oldLayout';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -6,7 +6,7 @@ const Section = styled.section`
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  background-size:auto;
+  background-size: cover;
 
 `
 

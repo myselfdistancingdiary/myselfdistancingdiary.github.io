@@ -1,21 +1,31 @@
-import Layout from 'components/Layout';
-import styled from 'styled-components';
+// This import is only needed when checking authentication status directly from getInitialProps
+// import auth0 from '../lib/auth0'
+import { useFetchUser } from 'lib/user'
+import Layout from 'components/layout'
 
-const Section = styled.section`
-  background-image: url('/diary-background.jpg');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size:auto;
+function ProfileCard({ user }) {
+  return (
+    <>
+      <h1>Profile</h1>
 
-`
+      <div>
+        <h3>Profile (client rendered)</h3>
+        <img src={user.picture} alt="user picture" />
+        <p>nickname: {user.nickname}</p>
+        <p>name: {user.name}</p>
+      </div>
+    </>
+  )
+}
 
-export default function Page() {
-    return (
-      <Layout>
-        <Section>
-          Profile
-        </Section>
-      </Layout>
-    )
-  }
+function Profile() {
+  const { user, loading } = useFetchUser({ required: true })
+
+  return (
+    <Layout user={user} loading={loading}>
+      {loading ? <>Loading...</> : <ProfileCard user={user} />}
+    </Layout>
+  )
+}
+
+export default Profile

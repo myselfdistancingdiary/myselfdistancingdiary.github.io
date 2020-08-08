@@ -1,21 +1,19 @@
-import Layout from 'components/Layout';
-import styled from 'styled-components';
+import Layout from 'components/layout'
+import { useFetchUser } from 'lib/user'
 
-const Section = styled.section`
-  background-image: url('/diary-background.jpg');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  background-size:auto;
+function About() {
+  const { user, loading } = useFetchUser()
 
-`
+  return (
+    <Layout user={user} loading={loading}>
+      <h1>About</h1>
+      <p>
+        This is the about page, navigating between this page and <i>Home</i> is
+        always pretty fast. However, when you navigate to the <i>Profile</i>{' '}
+        page it takes more time because it uses SSR to fetch the user first;
+      </p>
+    </Layout>
+  )
+}
 
-export default function Page() {
-    return (
-      <Layout>
-        <Section>
-          About
-        </Section>
-      </Layout>
-    )
-  }
+export default About
