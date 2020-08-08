@@ -19,7 +19,6 @@ const Header = styled.header`
 
 const Main = styled.main`
   grid-area: main;
-  padding: 15px;
 `
 
 type Props = {

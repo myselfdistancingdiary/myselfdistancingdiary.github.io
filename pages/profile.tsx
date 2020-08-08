@@ -11,11 +11,11 @@ const Section = styled.section`
 `
 
 export default function Page() {
-  return (
-    <Layout>
-      <Section>
-        hello
-      </Section>
-    </Layout>
-  )
-}
+    return (
+      <Layout>
+        <Section>
+          Profile
+        </Section>
+      </Layout>
+    )
+  }
