@@ -1,1 +1,0 @@
-# myselfdistancingdiary.github.io
