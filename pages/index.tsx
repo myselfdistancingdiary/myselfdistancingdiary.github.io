@@ -1,37 +1,22 @@
-import Layout from 'components/layout'
+import Layout from 'components/Layout'
 import { useFetchUser } from 'lib/user'
+import styled from 'styled-components';
 
-function Home() {
-  const { user, loading } = useFetchUser()
+const Section = styled.section`
+  background-image: url('/assets/images/diary-background.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  padding: 50px;
+`;
 
+export default function Page() {
   return (
-    <Layout user={user} loading={loading}>
-      <h1>Next.js and Auth0 Example</h1>
-
-      {loading && <p>Loading login info...</p>}
-
-      {!loading && !user && (
-        <>
-          <p>
-            To test the login click in <i>Login</i>
-          </p>
-          <p>
-            Once you have logged in you should be able to click in{' '}
-            <i>Profile</i> and <i>Logout</i>
-          </p>
-        </>
-      )}
-
-      {user && (
-        <>
-          <h4>Rendered user info on the client</h4>
-          <img src={user.picture} alt="user picture" />
-          <p>nickname: {user.nickname}</p>
-          <p>name: {user.name}</p>
-        </>
-      )}
+    <Layout>
+      <Section>
+        hello
+      </Section>
     </Layout>
   )
 }
-
-export default Home

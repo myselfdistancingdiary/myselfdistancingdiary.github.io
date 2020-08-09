@@ -1,6 +1,11 @@
 import Link from 'next/link'
+import styled from 'styled-components';
 
-function Header({ user, loading}) {
+const Header = styled.header`
+
+`;
+
+export default function Component({ user, loading}) {
   return (
     <header>
       <nav>
@@ -82,5 +87,3 @@ function Header({ user, loading}) {
     </header>
   )
 }
-
-export default Header

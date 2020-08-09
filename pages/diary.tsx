@@ -1,4 +1,4 @@
-import Layout from 'components/layout';
+import Layout from 'components/authLayout';
 import styled from 'styled-components';
 import { useFetchUser } from 'lib/user'
 import { useForm } from "react-hook-form";

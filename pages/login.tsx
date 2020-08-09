@@ -1,4 +1,4 @@
-import Layout from 'components/oldLayout';
+import Layout from 'components/Layout';
 import styled from 'styled-components';
 
 const Section = styled.section`
