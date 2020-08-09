@@ -1,6 +1,5 @@
-import Layout from 'components/authLayout';
+import Layout from 'components/Layout';
 import styled from 'styled-components';
-import { useFetchUser } from 'lib/user'
 import { useForm } from "react-hook-form";
 
 
@@ -14,10 +13,10 @@ const Section = styled.section`
 `
 
 export default function Page() {
-  const { user, loading } = useFetchUser()
   const { register, handleSubmit } = useForm();
 
-  function onSubmit(data) {
+
+  function onSubmit(data: any) {
     const diaryString = data.diary;
     const diaryWords = diaryString.split(' ');
     const firstPersonWords = ["i", "i'm", "my", "me", "mine", "mine.","me."];
@@ -34,7 +33,7 @@ export default function Page() {
   }
 
     return (
-      <Layout user={user} loading={loading}>
+      <Layout>
       <Section>
       <form onSubmit={handleSubmit(onSubmit)}>
 

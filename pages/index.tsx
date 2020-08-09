@@ -1,5 +1,4 @@
 import Layout from 'components/Layout'
-import { useFetchUser } from 'lib/user'
 import styled from 'styled-components';
 
 const Section = styled.section`
