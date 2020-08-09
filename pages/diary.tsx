@@ -1,5 +1,8 @@
-import Layout from 'components/oldLayout';
+import Layout from 'components/layout';
 import styled from 'styled-components';
+import { useFetchUser } from 'lib/user'
+import { useForm } from "react-hook-form";
+
 
 const Section = styled.section`
   background-image: url('/diary-background.jpg');
@@ -11,10 +14,33 @@ const Section = styled.section`
 `
 
 export default function Page() {
+  const { user, loading } = useFetchUser()
+  const { register, handleSubmit } = useForm();
+
+  function onSubmit(data) {
+    const diaryString = data.diary;
+    const diaryWords = diaryString.split(' ');
+    const firstPersonWords = ["i", "i'm", "my", "me", "mine", "mine.","me."];
+    
+    for (const firstPersonWord of firstPersonWords) {
+      console.log(`loop for word ${firstPersonWord}`)
+      for (const diaryWord of diaryWords) {
+        if (diaryWord.toLowerCase() === firstPersonWord) {
+          alert(`the word ${diaryWord} is included!`);
+        }
+      }
+    }
+    return console.log(data);
+  }
+
     return (
-      <Layout>
-        <Section>
-          Diary
+      <Layout user={user} loading={loading}>
+      <Section>
+      <form onSubmit={handleSubmit(onSubmit)}>
+
+      <textarea name="diary" ref={register} rows={20} cols={40}> write your diary </textarea>
+      <input type="submit" />
+    </form>
         </Section>
       </Layout>
     )
