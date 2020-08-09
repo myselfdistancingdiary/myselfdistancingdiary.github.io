@@ -1,16 +1,15 @@
-import React, { ReactNode } from 'react';
-import styled from 'styled-components';
-import Link from 'next/link'
-
+import React, { ReactNode } from "react";
+import styled from "styled-components";
+import Link from "next/link";
 
 const Container = styled.div`
   display: grid;
   grid-template-rows: 126px 1fr;
   grid-template-areas:
-  "header"
-  "main";
+    "header"
+    "main";
   height: 100vh;
-`
+`;
 const Header = styled.header`
   grid-area: header;
   height: auto;
@@ -19,37 +18,36 @@ const Header = styled.header`
   display: grid;
   grid-template-columns: 50px 50px 50px 50px;
   padding: 50px;
-`
+`;
 
 const Main = styled.main`
   grid-area: main;
-`
+`;
 
 type Props = {
-  children?: ReactNode
-}
+  children?: ReactNode;
+};
 
-export default function Layout({children}: Props) {
+export default function Layout({ children }: Props) {
   return (
-    <Container>
-      <Header>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-        <Link href="/diary">
-          <a>Diary</a>
-        </Link>
-        <Link href="/login">
-          <a>Log in</a>
-        </Link>
-      </Header>
-      <Main>
-      {children}
-      </Main>
-    </Container>
-  )
+    <>
+      <Container>
+        <Header>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+          <Link href="/diary">
+            <a>Diary</a>
+          </Link>
+          <Link href="/login">
+            <a>Log in</a>
+          </Link>
+        </Header>
+        <Main>{children}</Main>
+      </Container>
+    </>
+  );
 }
-

@@ -13,8 +13,8 @@ const LeftColumn = styled.div`
 
 const Title = styled.div`
   font-size: 20px;
-  font-style: normal;
-  font-family: lulo-clean-w01-one-bold, sans-seif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
   color: #000000;
 `;
 
