@@ -4,11 +4,12 @@ import { useForm } from "react-hook-form";
 
 
 const Section = styled.section`
-  background-image: url('/diary-background.jpg');
+  background-image: url('/assets/images/diary-background.jpg');
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   background-size: cover;
+  text-align: center;
 
 `
 
@@ -38,6 +39,7 @@ export default function Page() {
       <form onSubmit={handleSubmit(onSubmit)}>
 
       <textarea name="diary" ref={register} rows={20} cols={40}> write your diary </textarea>
+      <br/>
       <input type="submit" />
     </form>
         </Section>
