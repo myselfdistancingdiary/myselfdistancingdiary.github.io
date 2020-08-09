@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 126px 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-areas:
     "header"
     "main";
@@ -16,7 +16,7 @@ const Header = styled.header`
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-columns: 1fr 50px 50px 50px 50px;
   padding: 50px;
 `;
 
@@ -41,9 +41,6 @@ export default function Layout({ children }: Props) {
           </Link>
           <Link href="/diary">
             <a>Diary</a>
-          </Link>
-          <Link href="/login">
-            <a>Log in</a>
           </Link>
         </Header>
         <Main>{children}</Main>
