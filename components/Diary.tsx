@@ -30,7 +30,7 @@ export default function Component() {
     for (const firstPersonWord of firstPersonWords) {
       for (const diaryWord of diaryWords) {
         if (diaryWord.toLowerCase() === firstPersonWord) {
-          alert(`the word ${diaryWord} is included!`);
+          alert(`the word ${diaryWord} is included! Shall we try using your pronouns or your own name?`);
         }
       }
     }
