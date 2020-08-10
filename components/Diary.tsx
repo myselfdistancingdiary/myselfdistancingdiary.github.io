@@ -40,10 +40,12 @@ export default function Component() {
     <Section>
         <Heading>My Self-Distancing Diary</Heading>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <input type="submit"/>
+        <br/><br/>
         <textarea name="diary" ref={register} rows={40} cols={100}>
         </textarea>
-        <br />
-        <input type="submit" />
+        <br/><br/>
+        <input type="submit"/>
       </form>
     </Section>
   );
