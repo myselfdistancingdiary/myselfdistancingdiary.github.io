@@ -14,7 +14,7 @@ const Header = styled.header`
   grid-area: header;
   height: auto;
   width: 100%;
-  position: relative;
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr 100px 100px 100px 50px;
   padding: 50px;
@@ -44,7 +44,7 @@ export default function Layout({ children }: Props) {
           <Link href="/">
             <MenuItem>Home</MenuItem>
           </Link>
-          <Link href="/about">
+          <Link href="/#about">
             <MenuItem>About</MenuItem>
           </Link>
           <Link href="/diary">
