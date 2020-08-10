@@ -18,6 +18,7 @@ const Header = styled.header`
   display: grid;
   grid-template-columns: 1fr 100px 100px 100px 50px;
   padding: 50px;
+  font-weight: bold;
 `;
 
 const MenuItem = styled.a`
