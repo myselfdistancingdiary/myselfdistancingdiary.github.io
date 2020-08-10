@@ -20,4 +20,21 @@ We will collect the first name and also pronouns of users and give automatic edi
 
 ## Tech Stack Used
 
+- React
+- NextJS 
+- Typescript
+- Styled-components
+- React Hook Form
+
 ## How to Use It
+
+### Step 1. Recall the event
+First, users would need to recall a stressful event that impacted them during the COVID pandemic. It can be about a sad, angry, or frustrating event. 
+
+### Step 2. Take a step back 
+Now, users should take a few steps back, mentally move away from the situation to a point where they can watch the event from a distance as if they were a fly on the wall
+
+### Step 3. Write a self-distancing diary
+Below is the instruction that users will get. 
+“Please recall the event using a third-person voice to understand what happened to your distant self and the reasons underlying the emotions of the distant you. Rather than using "I", "My", "Me", "Mine", you will be using your own name or your pronouns (i.e., a third-person voice) to describe the event.”
+We will collect the first name and also pronouns of users and give automatic edit suggestions to remind users to use a third-person voice, whenever they accidentally go back to relive a traumatic event by using a first-person voice (i.e., I, my, me, mine)
