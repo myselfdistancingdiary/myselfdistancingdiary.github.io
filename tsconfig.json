@@ -33,6 +33,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "lib/auth0.js", "lib/user.js"
+    "**/*.tsx"
   ]
 }
