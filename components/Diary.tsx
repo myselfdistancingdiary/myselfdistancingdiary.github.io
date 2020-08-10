@@ -28,14 +28,12 @@ export default function Component() {
     const firstPersonWords = ["i", "i'm", "my", "me", "mine", "mine.", "me."];
 
     for (const firstPersonWord of firstPersonWords) {
-      console.log(`loop for word ${firstPersonWord}`);
       for (const diaryWord of diaryWords) {
         if (diaryWord.toLowerCase() === firstPersonWord) {
           alert(`the word ${diaryWord} is included!`);
         }
       }
     }
-    return console.log(data);
   }
 
   return (
