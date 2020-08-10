@@ -16,8 +16,13 @@ const Header = styled.header`
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 50px 50px 50px 50px;
+  grid-template-columns: 1fr 100px 100px 100px 50px;
   padding: 50px;
+`;
+
+const MenuItem = styled.a`
+  font-size: 15px;
+  cursor: pointer;
 `;
 
 const Main = styled.main`
@@ -33,14 +38,17 @@ export default function Layout({ children }: Props) {
     <>
       <Container>
         <Header>
+          <div>
+
+          </div>
           <Link href="/">
-            <a>Home</a>
+            <MenuItem>Home</MenuItem>
           </Link>
           <Link href="/about">
-            <a>About</a>
+            <MenuItem>About</MenuItem>
           </Link>
           <Link href="/diary">
-            <a>Diary</a>
+            <MenuItem>Diary</MenuItem>
           </Link>
         </Header>
         <Main>{children}</Main>

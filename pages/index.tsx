@@ -2,13 +2,14 @@ import Layout from "components/Layout";
 import styled from "styled-components";
 
 const Section = styled.section`
-  background-image: url("/assets/images/diary-background.jpg");
+  background-image: url("/assets/images/writing-letters.jpg");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   background-size: cover;
   padding: 50px;
   text-align: center;
+  padding-top: 200px;
 `;
 
 const HeadingTop = styled.h3`
