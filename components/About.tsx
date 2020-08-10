@@ -15,15 +15,16 @@ const LeftColumn = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   color: #000000;
   padding-bottom: 40px;
 `;
 
 const Paragraph = styled.p`
-  font-size: 15px;
+  font-size: 20px;
   padding: 15px;
+  text-align: justify;
 `;
 
 const RightColumn = styled.div`
