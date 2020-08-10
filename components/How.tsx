@@ -6,7 +6,7 @@ const Section = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   height: 950px;
-  background-position: 0px -100px;
+  background-position: 0px 0px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 600px 1fr;

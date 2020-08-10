@@ -16,7 +16,6 @@ const LeftColumn = styled.div`
 
 const Title = styled.div`
   font-size: 20px;
-  font-family: "Quicksand", sans-serif;
   font-weight: bold;
   color: #000000;
   padding-bottom: 40px;

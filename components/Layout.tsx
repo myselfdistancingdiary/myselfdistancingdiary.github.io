@@ -48,7 +48,7 @@ export default function Layout({ children }: Props) {
           <Link href="/#about">
             <MenuItem>About</MenuItem>
           </Link>
-          <Link href="/diary">
+          <Link href="/#diary">
             <MenuItem>Diary</MenuItem>
           </Link>
         </Header>
